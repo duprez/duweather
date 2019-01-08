@@ -13,5 +13,6 @@ body {
     min-height: calc(100vh - 112px); // 112px es el tamaño de la toolbar
     background-color: $primary;
     color: $foreground;
+    font-family: $font-family;
   }
 }

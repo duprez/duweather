@@ -3,6 +3,7 @@ import { WeatherService } from '../../weather.service';
 import { Weather } from '../../models/weather';
 import { Location } from '../../models/location';
 import { Current } from '../../models/current';
+import { Forecast } from '../../models/forecast';
 
 @Component({
   selector: 'app-weather',
@@ -14,10 +15,13 @@ export class WeatherComponent implements OnInit {
   location: Location;
   current: Current;
 
+  forecast: Forecast;
+
   constructor(
     private weatherService: WeatherService
   ) {
     this.getCurrentWeather();
+    this.getForecastWeather();
   }
 
   ngOnInit() {
@@ -30,6 +34,18 @@ export class WeatherComponent implements OnInit {
       this.current = this.weather.current;
       console.log(res);
     });
+  }
+
+  getForecastWeather(): void {
+    this.weatherService.getForecastWeather().subscribe(res => {
+      this.forecast = res;
+      console.log('Forecast', res);
+    });
+  }
+
+  getDayIcon(path: string): string {
+    const newPath = path.substr(2);
+    return 'http://' + newPath;
   }
 
 }
