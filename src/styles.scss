@@ -5,3 +5,13 @@
 @import './app/core/styles/themes/dark-theme';
 
 @import './app/core/styles/global/global';
+
+
+body {
+  margin: 0;
+  .container {
+    min-height: calc(100vh - 112px); // 112px es el tamaño de la toolbar
+    background-color: $primary;
+    color: $foreground;
+  }
+}

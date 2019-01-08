@@ -1,5 +1,9 @@
 {{ weather | json }}
-<div fxLayout="row">
-  <div fxFlex>1</div>
-  <div>2</div>
+
+<div class="weather-container">
+  <div class="weather-header">
+    <div class="weather-time"> {{ current.temp_c }} º</div>
+    <div class="weather-location">{{ location.name }} - {{location.localtime | date: 'dd/MM/yyyy HH:mm'}}</div>
+    <div class="weather-sublocation">{{ location.tz_id }} </div>
+  </div>
 </div>

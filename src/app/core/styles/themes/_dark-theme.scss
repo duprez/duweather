@@ -8,7 +8,9 @@ $app-theme:   mat-dark-theme($app-primary, $app-accent);
 @include angular-material-theme($app-theme);
 
 $app-warn: map-get($app-theme, warn);
+$app-foreground: map-get($app-theme, foreground);
 
-$primary: mat-color($app-primary);
-$accent:  mat-color($app-accent);
-$warn:    mat-color($app-warn);
+$primary:    mat-color($app-primary);
+$accent:     mat-color($app-accent);
+$warn:       mat-color($app-warn);
+$foreground: mat-color($app-foreground, text);

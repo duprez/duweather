@@ -1,0 +1,11 @@
+.weather-container {
+  .weather-header {
+    font-size: 16px;
+    & div {
+      padding: 20px 0;
+    }
+    .weather-time {
+      font-size: 21px;
+    }
+  }
+}
