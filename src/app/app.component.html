@@ -5,10 +5,18 @@
         <mat-icon>wb_sunny</mat-icon>
         <span>Duweather</span>
       </div>
-      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>format_color_fill</mat-icon>
+      </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="changeTheme()">Dark theme</button>
-        <button mat-menu-item (click)="changeTheme('light-theme')">Light theme</button>
+        <button mat-menu-item (click)="changeTheme()">
+          <mat-icon style="color: black;">lens</mat-icon>
+          Dark theme
+        </button>
+        <button mat-menu-item (click)="changeTheme('light-theme')">
+          <mat-icon style="color: #edeff2;">lens</mat-icon>
+          Light theme
+        </button>
       </mat-menu>
       <a mat-icon-button href="https://github.com/duprez"
         ><i class="fab fa-github"></i
