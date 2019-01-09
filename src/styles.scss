@@ -2,17 +2,15 @@
 
 @include mat-core();
 
-@import './app/core/styles/themes/dark-theme';
-
+// GLOBAL STYLES
 @import './app/core/styles/global/global';
-
+// MATERIAL STYLES
+@import './app/core/styles/material/toolbar';
+// DEFAULT THEMES
+@import './app/core/styles/themes/dark-theme';
+@import './app/core/styles/themes/light-theme';
 
 body {
   margin: 0;
-  .container {
-    min-height: calc(100vh - 112px); // 112px es el tamaño de la toolbar
-    background-color: $primary;
-    color: $foreground;
-    font-family: $font-family;
-  }
+  font-family: $font-family;
 }

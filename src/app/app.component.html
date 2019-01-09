@@ -1,20 +1,31 @@
-<mat-toolbar color="accent" class="mat-elevation-z2">
-  <mat-toolbar-row>
-    <div fxFlex fxLayoutAlign="start center" fxLayoutGap="7px">
-      <mat-icon>wb_sunny</mat-icon>
-      <span>Duweather</span>
-    </div>
-    <a mat-icon-button href="https://github.com/duprez"><i class="fab fa-github"></i></a>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <mat-form-field floatLabel="never" class="search-form">
-      <mat-icon matPrefix class="search-icon">search</mat-icon>
-      <mat-label>Almería</mat-label>
-      <input matInput type="text" />
-    </mat-form-field>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="app-container">
+  <mat-toolbar color="accent" class="mat-elevation-z2">
+    <mat-toolbar-row>
+      <div fxFlex fxLayoutAlign="start center" fxLayoutGap="7px">
+        <mat-icon>wb_sunny</mat-icon>
+        <span>Duweather</span>
+      </div>
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="changeTheme()">Dark theme</button>
+        <button mat-menu-item (click)="changeTheme('light-theme')">Light theme</button>
+      </mat-menu>
+      <a mat-icon-button href="https://github.com/duprez"
+        ><i class="fab fa-github"></i
+      ></a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <mat-form-field floatLabel="never" class="search-form">
+        <mat-icon matPrefix class="search-icon">search</mat-icon>
+        <mat-label>Almería</mat-label>
+        <input matInput type="text" />
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<div class="container">
-  <router-outlet></router-outlet>
+  <mat-card>
+    <mat-card-content>
+      <div class="container"><router-outlet></router-outlet></div>
+    </mat-card-content>
+  </mat-card>
 </div>

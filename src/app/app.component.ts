@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'duweather';
+  currentTheme = '';
+
+  constructor(@Inject(DOCUMENT) private document: Document) { }
+
+  changeTheme(theme?: string): void {
+    if (this.currentTheme) {
+      this.document.body.classList.remove(this.currentTheme);
+    }
+    if (theme !== 'dark-theme') {
+      this.document.body.classList.add(theme);
+    }
+    this.currentTheme = theme;
+  }
 }
