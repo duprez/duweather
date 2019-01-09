@@ -1,5 +1,3 @@
-{{ weather | json }}
-
 <div *ngIf="weather; else loading" class="weather-container">
   <div class="weather-header" fxLayout="column" fxLayoutAlign="center center">
     <div class="weather-time">{{ current?.temp_c }} º</div>
@@ -12,16 +10,37 @@
     </div>
   </div>
 
-  <div *ngIf="forecast" class="weather-forecast-container"
-    fxLayout="row" fxLayout="start center" fxLayoutGap="20px"
-    fxLayout.lt-sm="column" fxLayout.lt-sm="start strech">
-    <div *ngFor="let day of forecast.forecast.forecastday" class="day-container">
-      <div class="day-number">{{ day.date | date: 'dd' }}</div>
-      <div>
-        <img [src]="getDayIcon(day.day.condition.icon)">
-      </div>
-      <div class="temp-container">
-        {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+  <div fxLayoutAlign="start center">
+    <div
+      *ngIf="forecast"
+      class="weather-forecast-container"
+      fxLayout.lt-md="column"
+      fxLayoutGap.lt-md="25px"
+    >
+      <div
+        *ngFor="let day of forecast.forecast.forecastday"
+        class="day-container"
+        fxLayout.lt-md="row"
+        fxLayoutGap.lt-md="20px"
+        fxLayoutAlign.lt-md="start center"
+      >
+        <!-- Responsive display when GT MD-->
+        <div fxHide.lt-md class="day-number">{{ day.date | date: 'dd' }}</div>
+        <div fxHide.lt-md>
+          <img [src]="getDayIcon(day.day.condition.icon)" />
+        </div>
+        <div fxHide.lt-md class="temp-container">
+          {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+        </div>
+
+        <!-- Responsive display when LT MD -->
+        <div fxHide.gt-md><img [src]="getDayIcon(day.day.condition.icon)" /></div>
+        <div fxHide.gt-md fxLayout="column">
+          <div class="day-number">{{ day.date | date: 'dd' }}</div>
+          <div class="temp-container">
+            {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
