@@ -1,0 +1,17 @@
+@import '../palettes/light-palette';
+
+$app-primary: mat-palette($primary-palette);
+$app-accent:  mat-palette($accent-palette);
+$app-theme:   mat-light-theme($app-primary, $app-accent);
+
+.light-theme {
+  @include angular-material-theme($app-theme);
+  
+  $app-warn: map-get($app-theme, warn);
+  $app-foreground: map-get($app-theme, foreground);
+  
+  $primary:    mat-color($app-primary);
+  $accent:     mat-color($app-accent);
+  $warn:       mat-color($app-warn);
+  $foreground: mat-color($app-foreground, text);
+}
