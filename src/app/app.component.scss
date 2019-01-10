@@ -8,3 +8,9 @@
     width: 17px;
   }
 }
+
+.app-container {
+  .mat-card:first-child {
+    padding: 0;
+  }
+}

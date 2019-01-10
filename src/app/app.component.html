@@ -1,41 +1,38 @@
 <div class="app-container">
-  <mat-toolbar color="accent" class="mat-elevation-z2">
-    <mat-toolbar-row>
-      <div fxFlex fxLayoutAlign="start center" fxLayoutGap="7px">
-        <mat-icon>wb_sunny</mat-icon>
-        <span>Duweather</span>
-      </div>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>format_color_fill</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="changeTheme()">
-          <mat-icon style="color: black;">lens</mat-icon>
-          Dark theme
-        </button>
-        <button mat-menu-item (click)="changeTheme('light-theme')">
-          <mat-icon style="color: #edeff2;">lens</mat-icon>
-          Light theme
-        </button>
-      </mat-menu>
-      <a mat-icon-button href="https://github.com/duprez"
-        ><i class="fab fa-github"></i
-      ></a>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-      <form novalidate (ngSubmit)="changePlace()">
-        <button mat-icon-button>
-          <mat-icon>search</mat-icon>
-        </button>
-        <mat-form-field floatLabel="never" class="search-form">
-          <mat-label>{{ location }}</mat-label>
-          <input matInput type="text" [formControl]="place"/>
-        </mat-form-field>
-      </form>
-    </mat-toolbar-row>
-  </mat-toolbar>
-
   <mat-card>
+    <mat-toolbar color="accent" class="mat-elevation-z3">
+      <mat-toolbar-row>
+        <div fxFlex fxLayoutAlign="start center" fxLayoutGap="7px">
+          <mat-icon>wb_sunny</mat-icon>
+          <span>Duweather</span>
+        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>format_color_fill</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="changeTheme()">
+            <mat-icon style="color: black;">lens</mat-icon>
+            Dark theme
+          </button>
+          <button mat-menu-item (click)="changeTheme('light-theme')">
+            <mat-icon style="color: #edeff2;">lens</mat-icon>
+            Light theme
+          </button>
+        </mat-menu>
+        <a mat-icon-button href="https://github.com/duprez"
+          ><i class="fab fa-github"></i
+        ></a>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <form novalidate (ngSubmit)="changePlace()">
+          <button mat-icon-button><mat-icon>search</mat-icon></button>
+          <mat-form-field floatLabel="never" class="search-form">
+            <mat-label>{{ location }}</mat-label>
+            <input matInput type="text" [formControl]="place" />
+          </mat-form-field>
+        </form>
+      </mat-toolbar-row>
+    </mat-toolbar>
     <mat-card-content>
       <div class="container"><router-outlet></router-outlet></div>
     </mat-card-content>
