@@ -29,6 +29,9 @@
           <mat-form-field floatLabel="never" class="search-form">
             <mat-label>{{ location }}</mat-label>
             <input matInput type="text" [formControl]="place" />
+            <button *ngIf="place.value" mat-button matSuffix mat-icon-button aria-label="Clear" (click)="place.setValue(null)">
+              <mat-icon>close</mat-icon>
+            </button>
           </mat-form-field>
         </form>
       </mat-toolbar-row>

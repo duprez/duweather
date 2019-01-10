@@ -12,5 +12,9 @@
 .app-container {
   .mat-card:first-child {
     padding: 0;
+    min-height: 100vh;
+    .mat-card-content {
+      height: 100%;
+    }
   }
 }

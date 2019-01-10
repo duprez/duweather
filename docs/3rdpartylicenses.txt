@@ -272,6 +272,8 @@ MIT
 @angular/platform-browser
 MIT
 
+@angular/material/button
+
 @angular/material
 MIT
 The MIT License
@@ -322,6 +324,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/animations
+MIT
+
+@angular/core
+MIT
+
 @angular/flex-layout
 MIT
 The MIT License
@@ -347,14 +355,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/core
-MIT
-
-@angular/material/button
-
-@angular/animations
-MIT
-
 @angular/router
 MIT
 
@@ -366,15 +366,18 @@ MIT
 
 @angular/material/tooltip
 
+@angular/material/icon
+
 @angular/material/card
 
 @angular/material/toolbar
 
-@angular/material/icon
-
 @angular/material/menu
 
 @angular/material/form-field
+
+@angular/service-worker
+MIT
 
 zone.js
 MIT
