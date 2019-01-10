@@ -1,0 +1,15 @@
+.weather-header {
+  font-size: 19px;
+  & div:not(:last-child) {
+    margin: 15px;
+  }
+  .weather-time {
+    font-size: 31px;
+  }
+  .weather-location-container {
+    text-align: center;
+    & div {
+      margin: 5px;
+    }
+  }
+}

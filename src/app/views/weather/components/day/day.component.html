@@ -1,0 +1,10 @@
+<div class="weather-header" fxLayout="column" fxLayoutAlign="center center">
+  <div class="weather-time">{{ current?.temp_c }} º</div>
+  <div class="weather-location-container">
+    <div class="weather-date">
+      {{ location.localtime | date: 'dd/MM/yyyy HH:mm' }}
+    </div>
+    <div class="weather-location">{{ location.name }}</div>
+    <div class="weather-sublocation">{{ location.tz_id }}</div>
+  </div>
+</div>

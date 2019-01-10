@@ -49,9 +49,4 @@ export class WeatherComponent implements OnInit {
     });
   }
 
-  getDayIcon(path: string): string {
-    const newPath = path.substr(2);
-    return 'http://' + newPath;
-  }
-
 }

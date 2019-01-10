@@ -1,0 +1,29 @@
+<div
+  class="weather-forecast-container"
+  fxLayout.lt-md="column"
+  fxLayoutGap.lt-md="25px"
+>
+  <div
+    *ngFor="let day of forecast.forecast.forecastday"
+    class="day-container"
+    fxLayout.lt-md="row"
+    fxLayoutGap.lt-md="20px"
+    fxLayoutAlign.lt-md="start center"
+  >
+    <!-- Responsive display when GT MD-->
+    <div fxHide.lt-md class="day-number">{{ day.date | date: 'dd' }}</div>
+    <div fxHide.lt-md><img [src]="getDayIcon(day.day.condition.icon)" /></div>
+    <div fxHide.lt-md class="temp-container">
+      {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+    </div>
+
+    <!-- Responsive display when LT MD -->
+    <div fxHide.gt-md><img [src]="getDayIcon(day.day.condition.icon)" /></div>
+    <div fxHide.gt-md fxLayout="column">
+      <div class="day-number">{{ day.date | date: 'dd' }}</div>
+      <div class="temp-container">
+        {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+      </div>
+    </div>
+  </div>
+</div>
