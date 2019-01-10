@@ -23,11 +23,15 @@
       ></a>
     </mat-toolbar-row>
     <mat-toolbar-row>
-      <mat-form-field floatLabel="never" class="search-form">
-        <mat-icon matPrefix class="search-icon">search</mat-icon>
-        <mat-label>Almería</mat-label>
-        <input matInput type="text" />
-      </mat-form-field>
+      <form novalidate (ngSubmit)="changePlace()">
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+        <mat-form-field floatLabel="never" class="search-form">
+          <mat-label>{{ location }}</mat-label>
+          <input matInput type="text" [formControl]="place"/>
+        </mat-form-field>
+      </form>
     </mat-toolbar-row>
   </mat-toolbar>
 

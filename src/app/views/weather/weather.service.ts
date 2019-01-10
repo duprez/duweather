@@ -28,6 +28,5 @@ export class WeatherService {
     params = params.set('q', place);
     params = params.set('days', days.toString());
     return this.http.get<Forecast>(`${this.urlForecast}`, { params: params });
-
   }
 }

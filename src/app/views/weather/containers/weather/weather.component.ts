@@ -4,13 +4,14 @@ import { Weather } from '../../models/weather';
 import { Location } from '../../models/location';
 import { Current } from '../../models/current';
 import { Forecast } from '../../models/forecast';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
+
   weather: Weather;
   location: Location;
   current: Current;
@@ -18,17 +19,22 @@ export class WeatherComponent implements OnInit {
   forecast: Forecast;
 
   constructor(
-    private weatherService: WeatherService
+    private weatherService: WeatherService,
+    private route: ActivatedRoute
   ) {
     this.getCurrentWeather();
     this.getForecastWeather();
   }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(queryParams => {
+      this.getCurrentWeather(queryParams.place);
+      this.getForecastWeather(queryParams.place);
+    });
   }
 
-  getCurrentWeather(): void {
-    this.weatherService.getCurrentWeather().subscribe(res => {
+  getCurrentWeather(place?: string): void {
+    this.weatherService.getCurrentWeather(place).subscribe(res => {
       this.weather = res;
       this.location = this.weather.location;
       this.current = this.weather.current;
@@ -36,8 +42,8 @@ export class WeatherComponent implements OnInit {
     });
   }
 
-  getForecastWeather(): void {
-    this.weatherService.getForecastWeather().subscribe(res => {
+  getForecastWeather(place?: string): void {
+    this.weatherService.getForecastWeather(place).subscribe(res => {
       this.forecast = res;
       console.log('Forecast', res);
     });
