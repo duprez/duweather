@@ -42,7 +42,7 @@ export class AppComponent {
     this.currentTheme = theme;
   }
 
-  changePlace(newPlace: string): void {
+  changePlace(newPlace?: string): void {
     this.router.navigate(['.'], {
       queryParams: { place: newPlace ? newPlace : this.place.value },
       queryParamsHandling: 'merge'
