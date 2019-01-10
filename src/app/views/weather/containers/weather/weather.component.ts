@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-
   weather: Weather;
   location: Location;
   current: Current;
@@ -44,9 +43,9 @@ export class WeatherComponent implements OnInit {
 
   getForecastWeather(place?: string): void {
     this.weatherService.getForecastWeather(place).subscribe(res => {
+      res.forecast.forecastday.splice(0, 1); // Eliminamos el primer dia ya que lo estamos mostrando
       this.forecast = res;
       console.log('Forecast', res);
     });
   }
-
 }
