@@ -1,0 +1,793 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>duweather documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">duweather documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WeatherComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/weather/containers/weather/weather.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-weather</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./weather.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./weather.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#current">current</a>
+                            </li>
+                            <li>
+                                <a href="#forecast">forecast</a>
+                            </li>
+                            <li>
+                                <a href="#location">location</a>
+                            </li>
+                            <li>
+                                <a href="#weather">weather</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getCurrentWeather">getCurrentWeather</a>
+                            </li>
+                            <li>
+                                <a href="#getDayIcon">getDayIcon</a>
+                            </li>
+                            <li>
+                                <a href="#getForecastWeather">getForecastWeather</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(weatherService: <a href="../injectables/WeatherService.html">WeatherService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>weatherService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCurrentWeather"></a>
+                        <span class="name">
+                            <b>
+                            getCurrentWeather
+                            </b>
+                            <a href="#getCurrentWeather"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getCurrentWeather()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDayIcon"></a>
+                        <span class="name">
+                            <b>
+                            getDayIcon
+                            </b>
+                            <a href="#getDayIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDayIcon(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>path</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getForecastWeather"></a>
+                        <span class="name">
+                            <b>
+                            getForecastWeather
+                            </b>
+                            <a href="#getForecastWeather"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getForecastWeather()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="current"></a>
+                        <span class="name">
+                            <b>
+                            current
+                            </b>
+                            <a href="#current"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>current:     <code><a href="../interfaces/Current.html" target="_self" >Current</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Current.html" target="_self" >Current</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="forecast"></a>
+                        <span class="name">
+                            <b>
+                            forecast
+                            </b>
+                            <a href="#forecast"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>forecast:     <code><a href="../interfaces/Forecast.html" target="_self" >Forecast</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Forecast.html" target="_self" >Forecast</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="location"></a>
+                        <span class="name">
+                            <b>
+                            location
+                            </b>
+                            <a href="#location"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>location:     <code><a href="../interfaces/Location.html" target="_self" >Location</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Location.html" target="_self" >Location</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="weather"></a>
+                        <span class="name">
+                            <b>
+                            weather
+                            </b>
+                            <a href="#weather"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>weather:     <code><a href="../interfaces/Weather.html" target="_self" >Weather</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/Weather.html" target="_self" >Weather</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/views/weather/containers/weather/weather.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { WeatherService } from &#x27;../../weather.service&#x27;;
+import { Weather } from &#x27;../../models/weather&#x27;;
+import { Location } from &#x27;../../models/location&#x27;;
+import { Current } from &#x27;../../models/current&#x27;;
+import { Forecast } from &#x27;../../models/forecast&#x27;;
+
+@Component({
+  selector: &#x27;app-weather&#x27;,
+  templateUrl: &#x27;./weather.component.html&#x27;,
+  styleUrls: [&#x27;./weather.component.scss&#x27;]
+})
+export class WeatherComponent implements OnInit {
+  weather: Weather;
+  location: Location;
+  current: Current;
+
+  forecast: Forecast;
+
+  constructor(
+    private weatherService: WeatherService
+  ) {
+    this.getCurrentWeather();
+    this.getForecastWeather();
+  }
+
+  ngOnInit() {
+  }
+
+  getCurrentWeather(): void {
+    this.weatherService.getCurrentWeather().subscribe(res &#x3D;&gt; {
+      this.weather &#x3D; res;
+      this.location &#x3D; this.weather.location;
+      this.current &#x3D; this.weather.current;
+      console.log(res);
+    });
+  }
+
+  getForecastWeather(): void {
+    this.weatherService.getForecastWeather().subscribe(res &#x3D;&gt; {
+      this.forecast &#x3D; res;
+      console.log(&#x27;Forecast&#x27;, res);
+    });
+  }
+
+  getDayIcon(path: string): string {
+    const newPath &#x3D; path.substr(2);
+    return &#x27;http://&#x27; + newPath;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;weather; else loading&quot; class&#x3D;&quot;weather-container&quot;&gt;
+  &lt;div class&#x3D;&quot;weather-header&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    &lt;div class&#x3D;&quot;weather-time&quot;&gt;{{ current?.temp_c }} º&lt;/div&gt;
+    &lt;div class&#x3D;&quot;weather-location-container&quot;&gt;
+      &lt;div class&#x3D;&quot;weather-date&quot;&gt;
+        {{ location.localtime | date: &#x27;dd/MM/yyyy HH:mm&#x27; }}
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;weather-location&quot;&gt;{{ location.name }}&lt;/div&gt;
+      &lt;div class&#x3D;&quot;weather-sublocation&quot;&gt;{{ location.tz_id }}&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div fxLayoutAlign&#x3D;&quot;start center&quot;&gt;
+    &lt;div
+      *ngIf&#x3D;&quot;forecast&quot;
+      class&#x3D;&quot;weather-forecast-container&quot;
+      fxLayout.lt-md&#x3D;&quot;column&quot;
+      fxLayoutGap.lt-md&#x3D;&quot;25px&quot;
+    &gt;
+      &lt;div
+        *ngFor&#x3D;&quot;let day of forecast.forecast.forecastday&quot;
+        class&#x3D;&quot;day-container&quot;
+        fxLayout.lt-md&#x3D;&quot;row&quot;
+        fxLayoutGap.lt-md&#x3D;&quot;20px&quot;
+        fxLayoutAlign.lt-md&#x3D;&quot;start center&quot;
+      &gt;
+        &lt;!-- Responsive display when GT MD--&gt;
+        &lt;div fxHide.lt-md class&#x3D;&quot;day-number&quot;&gt;{{ day.date | date: &#x27;dd&#x27; }}&lt;/div&gt;
+        &lt;div fxHide.lt-md&gt;
+          &lt;img [src]&#x3D;&quot;getDayIcon(day.day.condition.icon)&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div fxHide.lt-md class&#x3D;&quot;temp-container&quot;&gt;
+          {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+        &lt;/div&gt;
+
+        &lt;!-- Responsive display when LT MD --&gt;
+        &lt;div fxHide.gt-md&gt;&lt;img [src]&#x3D;&quot;getDayIcon(day.day.condition.icon)&quot; /&gt;&lt;/div&gt;
+        &lt;div fxHide.gt-md fxLayout&#x3D;&quot;column&quot;&gt;
+          &lt;div class&#x3D;&quot;day-number&quot;&gt;{{ day.date | date: &#x27;dd&#x27; }}&lt;/div&gt;
+          &lt;div class&#x3D;&quot;temp-container&quot;&gt;
+            {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #loading&gt; &lt;mat-spinner&gt;&lt;/mat-spinner&gt; &lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./weather.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.weather-container {
+  .weather-header {
+    font-size: 19px;
+    &amp; div:not(:last-child) {
+      margin: 15px;
+    }
+    .weather-time {
+      font-size: 31px;
+    }
+    .weather-location-container {
+      text-align: center;
+      &amp; div {
+        margin: 5px;
+      }
+    }
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="weather; else loading" class="weather-container">  <div class="weather-header" fxLayout="column" fxLayoutAlign="center center">    <div class="weather-time">{{ current?.temp_c }} º</div>    <div class="weather-location-container">      <div class="weather-date">        {{ location.localtime | date: \'dd/MM/yyyy HH:mm\' }}      </div>      <div class="weather-location">{{ location.name }}</div>      <div class="weather-sublocation">{{ location.tz_id }}</div>    </div>  </div>  <div fxLayoutAlign="start center">    <div      *ngIf="forecast"      class="weather-forecast-container"      fxLayout.lt-md="column"      fxLayoutGap.lt-md="25px"    >      <div        *ngFor="let day of forecast.forecast.forecastday"        class="day-container"        fxLayout.lt-md="row"        fxLayoutGap.lt-md="20px"        fxLayoutAlign.lt-md="start center"      >        <!-- Responsive display when GT MD-->        <div fxHide.lt-md class="day-number">{{ day.date | date: \'dd\' }}</div>        <div fxHide.lt-md>          <img [src]="getDayIcon(day.day.condition.icon)" />        </div>        <div fxHide.lt-md class="temp-container">          {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}        </div>        <!-- Responsive display when LT MD -->        <div fxHide.gt-md><img [src]="getDayIcon(day.day.condition.icon)" /></div>        <div fxHide.gt-md fxLayout="column">          <div class="day-number">{{ day.date | date: \'dd\' }}</div>          <div class="temp-container">            {{ day.day.maxtemp_c }}º {{ day.day.mintemp_c }}          </div>        </div>      </div>    </div>  </div></div><ng-template #loading> <mat-spinner></mat-spinner> </ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WeatherComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
