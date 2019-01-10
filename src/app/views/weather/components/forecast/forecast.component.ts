@@ -14,6 +14,6 @@ export class ForecastComponent {
 
   getDayIcon(path: string): string {
     const newPath = path.substr(2);
-    return 'http://' + newPath;
+    return 'https://' + newPath;
   }
 }

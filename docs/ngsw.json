@@ -7,12 +7,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "duweather/4.387159186b165ced9853.js",
+        "duweather/4.ca6c923087e0d9c86967.js",
         "duweather/favicon.ico",
         "duweather/index.html",
         "duweather/main.f34dd74ebb0373d518dd.js",
         "duweather/polyfills.1ef83d22ada557f4a131.js",
-        "duweather/runtime.fced475c92b5229bad87.js",
+        "duweather/runtime.0a4d1b201abbea79c321.js",
         "duweather/styles.6402f35dfb521aa6e532.css"
       ],
       "patterns": []
@@ -36,7 +36,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "duweather/4.387159186b165ced9853.js": "8aff5cbb23c9ce78ba53d4b9a806c76bf1a2da28",
+    "duweather/4.ca6c923087e0d9c86967.js": "b6f03ff70c199a68dbf5616b073d90d3567f325b",
     "duweather/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "duweather/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "duweather/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -46,10 +46,10 @@
     "duweather/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "duweather/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "duweather/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "duweather/index.html": "e3387151f393219d075c699b470f1264b3288e05",
+    "duweather/index.html": "29379aa49c30ab4d3127e603547f7f78451d54ab",
     "duweather/main.f34dd74ebb0373d518dd.js": "43197ce8ad44d698ec1d69dc4f062a505158cf8d",
     "duweather/polyfills.1ef83d22ada557f4a131.js": "f5c688c6cdf730d54759e30839fbd417dbe38e31",
-    "duweather/runtime.fced475c92b5229bad87.js": "c102e7bfe1c1ad4a2559d69415ccad8393c0ede3",
+    "duweather/runtime.0a4d1b201abbea79c321.js": "3d80352cfe29c1129f655b5348be943d823a2566",
     "duweather/styles.6402f35dfb521aa6e532.css": "079cf6c48bc320c6fbb959e9735b05b9b090f147"
   },
   "navigationUrls": [
